@@ -58,7 +58,7 @@ if (e.rising()) {
 Implements debounced state tracking using timestamps.
 
 ```cpp
-DebouncedState debounced(50); // 50ms debounce
+DebouncedState<50> debounced; // 50ms debounce
 
 if (debounced.update(rawState, millis())) {
     Edge e = debounced.edge();
